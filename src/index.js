@@ -41,30 +41,30 @@ function createButtons() {
     const wrapper = document.querySelector('#wrapper');
     const prev = document.createElement('button');
     prev.setAttribute('type','button');
+    prev.setAttribute('id','prev');
     prev.textContent = "<--";
-    wrapper.appendChild(prev);
+    currentImage.appendChild(prev);
 
     const next = document.createElement('button');
     next.setAttribute('type','button');
+    next.setAttribute('id','next');
     next.textContent = "-->";
-    wrapper.appendChild(next);
+    currentImage.appendChild(next);
 
     prev.addEventListener('click',()=>{
-        if (currentImage.childElementCount > 0){
+        if (currentImage.childElementCount > 2){
         currentImage.removeChild(current)}
         counter < 0 ? counter = images.length -1 : counter -= 1;
         current.src = images[counter];
-        currentImage.appendChild(current)
-        // play();
+        currentImage.appendChild(current);
     });
 
     next.addEventListener('click',()=>{
-        if (currentImage.childElementCount > 0){
+        if (currentImage.childElementCount > 2){
         currentImage.removeChild(current);}
         counter > images.length -1 ? counter = 0 : counter +=1;
         current.src = images[counter];
-        currentImage.appendChild(current)
-        // play();
+        currentImage.appendChild(current);
     });
 };
 

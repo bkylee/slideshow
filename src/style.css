@@ -1,0 +1,18 @@
+:root{
+    box-sizing: border-box;
+}
+button{
+    border: none;
+    background-color: transparent;
+    font-size: 10rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: 550px;
+}
+
+#next{
+    right: 720px;
+}
+
+
+
